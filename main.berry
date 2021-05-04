@@ -1,3 +1,16 @@
+// import 'github:minibox24/berryberry@src/parse'
+import 'local:src/parse'
+
+// import 'github:minibox24/berryberry@src/execute'
+import 'local:src/execute'
+
 func BerryBerry() {
-    return "Hello, World!"
+  return {
+    "run": func (this, source) {
+      parsed = __berryberry_parse_Parse(this, source)
+      result = __berryberry_execute_Execute(this, parsed)
+
+      return result
+    }
+  }
 }

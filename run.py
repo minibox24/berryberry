@@ -10,6 +10,8 @@ code = """
 import "local:main"
 
 bb = BerryBerry()
+
+bb.run(bb, "Hello, World!")
 """
 
 
